@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christopher Gorrey | Frontend Developer</title>
+
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+    <nav class="nav-bar">
+        <a href="#home" class="name">Christopher Gorrey</a>
+        <button class="menu-btn" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1 class="hero-intro">
+                    Nice to meet you! I'm <span class="underline">Christopher Gorrey</span>
+                </h1>
+                <p class="hero-description">
+                    I'm a frontend developer passionate about building accessible,
+                    responsive and interactive websites using HTML, CSS and JavaScript
+                </p>
+                <div class="hero-btns">
+                    <a href="#projects" class=" button primary-btn"><span class="underline">View My Projects</span></a>
+                    <a href="#contact" class="button secondary-btn"><span class="underline">Contact Me</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="projects" id="projects">
+            <div class="section-container">
+                <div class="section-heading">
+                    <h2>Projects</h2>
+                </div>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <img src="./images/ElektrickEelFestival.png" alt="Elektrik Eel Music Festival project" class="project-image">
+                        <div class="project-content">
+                            <h3>Elektrik Eel Music Festival</h3>
+                            <p>A responsive website featuring a music festival landing page and an artist page.</p>
+                            <div class="project-technologies">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://music-festival-website.vercel.app/index.html" target="_blank">Live Site</a>
+                                <a href="https://github.com/Khriz93/MusicFestivalWebsite" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <img src="./images/ContactUs.png" alt="Contact Us Form" class="project-image">
+                        <div class="project-content">
+                            <h3>Contact Form</h3>
+                            <p>A resonsive contact form featuring custom validation and success feedback.</p>
+                            <div class="project-technologies">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://contact-form-one-vert.vercel.app/" target="_blank">Live Site</a>
+                                <a href="https://github.com/Khriz93/Contact-Form" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <img src="./images/FAQ-Accordion.png" alt="FAQ Page" class="project-image">
+                        <div class="project-content">
+                            <h3>FAQ Page</h3>
+                            <p>An interactive FAQ component with expandable and collapsible questions.</p>
+                            <div class="project-technologies">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://faq-accordion-ten-rho.vercel.app/" target="_blank">Live Site</a>
+                                <a href="https://github.com/Khriz93/FAQ-Accordion" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <img src="./images/RecipePage.png" alt="Recipe page project" class="project-image">
+                        <div class="project-content">
+                            <h3>Recipe Page</h3>
+                            <p>A simple yet elegant recipe design website for a how to make an omlette.</p>
+                            <div class="project-technologies">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://simpleomletterecipe2.vercel.app/" target="_blank">Live Site</a>
+                                <a href="https://github.com/Khriz93/Simple_Omlette_Recipe" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section>
+
+        <!-- About -->
+         <section class="about" id="about">
+            <div class="section-container about-container">
+                <div class="about-image-container">
+                    <img src="./images/profile.jpg" alt="Christopher Gorrey" class="about-image">
+                </div>
+                <div class="about-content">
+                    <h2>About Me</h2>
+                    <h3>Building better websites one project at a time</h3>
+                    <p>
+                        I'm a frontend developer focused on learning how to build clean,
+                        responsive and accessible websites.
+                    </p>
+                    <p>
+                        I enjoy turning designs into working websites and improving
+                        my skills through practical projects.
+                    </p>
+                </div>
+            </div>
+         </section>
+
+         <!-- Skills -->
+          <section class="skills" id="skills">
+            <div class="section-container">
+                <div class="section-heading">
+                    <h2>Skills</h2>
+                </div>
+                <div class="skills-grid">
+                    <div class="skills-card">
+                        <h3>HTML</h3>
+                        <p>Semantic and accessible page structure</p>
+                    </div>
+                    <div class="skills-card">
+                        <h3>CSS</h3>
+                        <p>Responsive layouts using Flexbox and Grid</p>
+                    </div>
+                    <div class="skills-card">
+                        <h3>JavaScript</h3>
+                        <p>Form validation and interactive interfaces</p>
+                    </div>
+                    <div class="skills-card">
+                        <h3>Git</h3>
+                        <p>Version control for tracking changes and managing project development</p>
+                    </div>
+                    <div class="skills-card">
+                        <h3>GutHub</h3>
+                        <p>Hosting, managing and sharing code repsitories and projects</p>
+                    </div>
+                    <div class="skills-card">
+                        <h3>Responsive Design</h3>
+                        <p>Creating layouts that adapt across mobile, table and desktop devices</p>
+                    </div>
+                </div>
+            </div>
+          </section>
+
+          <!-- Contact-->
+           <section class="contact" id="contact">
+            <div class="section-container contact-container">
+                <div class="section-heading">
+                    <h2>Let's Work Together</h2>
+                    <p> Have a project, opportunity or question?
+                        Feel free to get in touch.
+                    </p>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Your message"></textarea>
+                    </div>
+                    <button type="submit" class="button primary-btn">Send Message</button>
+                </form>
+            </div> 
+           </section>
+    </main>
+
+    <!-- Footer -->
+     <footer class="footer">
+        <div class="footer-content">
+            <p>© 2026 Christopher Gorrey</p>
+            <div class="footer-links">
+                <a href="https://github.com/Khriz93" target="_blank">Github</a>
+                <a href="https://www.linkedin.com/in/christopher-gorrey-5972b9186/" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+     </footer>
+
+</body>
+</html>
