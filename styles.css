@@ -42,9 +42,11 @@ ul {
 }
 
 .header {
+    position: relative;
     width: 100%;
     padding: 20px 0;
     background-color: #0f172a;
+    z-index: 1000;
 }
 
 /* NAV */
@@ -78,7 +80,19 @@ ul {
     width: 32px;
     height: 2px;
     background-color: #f8fafc;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-btn.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
 }
 
 .menu-btn:hover span {
@@ -87,6 +101,21 @@ ul {
 
 .nav-menu {
     display: none;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 70px;
+    right: 5%;
+    width: 220px;
+    padding: 25px;
+    background-color: #1e293b;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.nav-menu.active {
+    display: flex;
 }
 
 /* HERO */
@@ -137,6 +166,7 @@ ul {
     padding-top: 100px;
     gap: 35px;
 }
+
 .button {
     display: inline-flex;
     align-items: center;
@@ -424,6 +454,77 @@ ul {
     cursor: pointer;
 }
 
+#submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.botcheck {
+    display: none;
+}
+
+/* ERROR */
+.error-message {
+    display: none;
+    margin-top: 4px;
+    color: #f87171;
+    font-size: 0.85rem;
+}
+
+.error-message.active {
+    display: block;
+}
+
+.form-group input.error, .form-group textarea.error {
+    border:1px solid #f87171;
+}
+
+.form-group input.error:focus, .form-group textarea.error:focus {
+    border: 1px solid #f87171;
+    box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.1);
+}
+
+.success-message {
+    display: none;
+    margin-top: 30px;
+    padding: 22px;
+    background-color: #1e293b;
+    border: 1px solid #38bdf8;
+    border-radius: 12px;
+}
+
+.success-message.active {
+    display: block;
+}
+
+.success-message h3 {
+    color: #38bdf8;
+    margin-bottom: 8px;
+}
+
+.success-message p {
+    color: #cbd5e1;
+}
+
+/* SEND ERROR */
+.send-error-message {
+    display: none;
+    margin-top: 30px;
+    padding: 18px;
+    background-color: #1e293b;
+    border: 1px solid #f87171;
+    border-radius: 12px;
+}
+
+.send-error-message.active {
+    display: block;
+}
+
+.send-error-message p {
+    color: #f87171;
+}
+
 /* FOOTER */
 .footer {
     padding: 30px 0;
@@ -561,6 +662,12 @@ ul {
 
     .nav-menu {
         display: flex;
+        position: static;
+        flex-direction: row;
+        width: auto;
+        padding: 0;
+        background: none;
+        border-radius: 0;
         align-items: center;
         gap: 32px;
     }

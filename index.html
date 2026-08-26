@@ -12,7 +12,7 @@
     <header class="header">
     <nav class="nav-bar">
         <a href="#home" class="name">Christopher Gorrey</a>
-        <button class="menu-btn" aria-label="Open menu">
+        <button class="menu-btn" aria-label="Open menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
@@ -117,8 +117,6 @@
                 </div>
             </div>
         </section>
-        <section>
-
         <!-- About -->
          <section class="about" id="about">
             <div class="section-container about-container">
@@ -139,7 +137,6 @@
                 </div>
             </div>
          </section>
-
          <!-- Skills -->
           <section class="skills" id="skills">
             <div class="section-container">
@@ -192,7 +189,6 @@
                 </div>
             </div>
           </section>
-
           <!-- Contact-->
            <section class="contact" id="contact">
             <div class="section-container contact-container">
@@ -202,25 +198,42 @@
                         Feel free to get in touch.
                     </p>
                 </div>
-                <form class="contact-form">
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+                    <input type="hidden" name="access_key" value="1f04d7c7-612f-47d9-9099-0c048becac02">
+                    <input type="hidden" name="subject" value="New message from Christopher Gorrey Portfolio">
+
+                    <!-- SPAM PROTECTION -->
+                     <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off">
+
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Your Name">
+                        <p class="error-message" id="name-error">Please enter your name.</p>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" placeholder="your@email.com">
+                        <p class="error-message" id="email-error">Please enter a valid email address.</p>
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
                         <textarea id="message" name="message" placeholder="Your message"></textarea>
+                        <p class="error-message" id="message-error">Please enter a message.</p>
                     </div>
-                    <button type="submit" class="button primary-btn">Send Message</button>
+                    <button type="submit" class="button primary-btn" id="submit-btn">Send Message</button>
                 </form>
+                <div class="success-message" id="success-message" role="status" aria-live="polite">
+                    <h3>Message Sent!</h3>
+                    <p>Thanks for getting in touch. I'll get back to you soon.</p>
+                </div>
+                <div class="send-error-message" id="send-error-message" role="alert">
+                    <p>Sorry, something went wrong while sending your message.
+                        Please try again.
+                    </p>
+                </div>
             </div> 
            </section>
     </main>
-
     <!-- Footer -->
      <footer class="footer">
         <div class="footer-content">
