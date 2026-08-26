@@ -47,6 +47,8 @@ ul {
     background-color: #0f172a;
 }
 
+/* NAV */
+
 .nav-bar {
     width: 90%;
     max-width: 1200px;
@@ -86,6 +88,8 @@ ul {
 .nav-menu {
     display: none;
 }
+
+/* HERO */
 
 .hero {
     min-height: calc(100vh - 80px);
@@ -165,6 +169,8 @@ ul {
     background-color: #38bdf8;
     color: #0f172a;
 }
+
+/* PROJECTS */
 
 .projects {
     padding: 80px 0;
@@ -263,6 +269,8 @@ ul {
     color: #0f172a;
 }
 
+/* ABOUT */
+
 .about {
     padding: 80px 0;
     background-color: #0f172a;
@@ -272,6 +280,12 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 40px;
+}
+
+.about-image-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
 }
 
 .about-image {
@@ -322,6 +336,18 @@ ul {
     border-color: #38bdf8;
 }
 
+.skills-icon {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 18px;
+}
+
+.skills-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .skills-card h3 {
     color: #f8fafc;
     font-size: 1.2rem;
@@ -337,4 +363,335 @@ ul {
     transform: translateY(-4px);
     border-color: #38bdf8;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), 0 0 20px rgba(56, 189, 248, 0.08);
+}
+
+/* CONTACT */
+.contact {
+    padding: 80px 0;
+    background-color: #0f172a;
+}
+
+.contact-container {
+    max-width: 700px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #f8fafc;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    background-color: #1e293b;
+    color: #f8fafc;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder, .form-group textarea::placeholder {
+    color: #64748b
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
+}
+
+.form-group textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+.contact-form .button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+    padding: 30px 0;
+    background-color: #111827;
+    border-top: 1px solid #1e293b;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.footer-content p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.back-to-top {
+    color: #38bdf8;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.back-to-top:hover {
+    color: #7dd3fc;
+    transform: translateY(-2px);
+}
+
+.footer-links a {
+    color: #cbd5e1;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #38bdf8;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+    /* HERO */
+    .hero-content {
+        width: 85%;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: 1.05rem;
+    }
+
+    .hero-btns .button {
+        width: auto;
+    }
+
+    /* PROJECTS */
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .project-image {
+        height: 240px;
+    }
+
+    /* ABOUT */
+    .about-container {
+        gap: 50px;
+    }
+
+    .about-content {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .about-content h2 {
+        font-size: 2.4rem;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    /* CONTACT */
+    .contact-container {
+        width: 80%;
+    }
+
+    .contact-form .button {
+        width: auto;
+        align-items: flex-start;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    /* FOOTER */
+    .footer-content {
+        gap: 18px;
+    }
+
+    .footer-links {
+        gap: 28px;
+    }
+
+    .back-to-top {
+        font-size: 1.15rem;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+    /* NAV AND HEADER */
+    .menu-btn {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .nav-menu a {
+        color: #cbd5e1;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: color 0.2s ease;
+    }
+
+    .nav-menu a:hover {
+        color:#38bdf8
+    }
+
+    /* HERO */
+    .hero {
+        min-height: calc(100vh - 90px);
+        padding: 80px 0;
+    }
+
+    .hero-content {
+        width: 90%;
+        max-width: 1200px;
+    }
+
+    .hero h1 {
+        font-size: 4.5rem;
+        max-width: 800px;
+    }
+
+    .hero h2 {
+        font-size: 2.4rem;
+    }
+
+    .hero-description {
+        max-width: 650px;
+        font-size: 1.1rem;
+    }
+
+    .hero-btns {
+        gap: 18px;
+    }
+
+    /* PROJECTS */
+    .projects {
+        padding: 100px 0;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .project-image {
+        height: 220px;
+    }
+
+    /* ABOUT */
+    .about {
+        padding: 100px 0;
+    }
+
+    .about-container {
+        display: grid;
+        grid-template-columns: 420px 1fr;
+        align-items: center;
+        gap: 70px;
+    }
+
+    .about-content {
+        max-width: none;
+        margin: 0;
+    }
+
+    .about-image-container {
+        margin: 0;
+    }
+
+    .about-image {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .about-content h2 {
+        font-size: 2.7rem;
+    }
+
+    /* SKILLS */
+    .skills {
+        padding: 100px 0;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    /* CONTACT */
+    .contact {
+        padding: 100px 0;
+    }
+
+    .contact-container {
+        width: 90%;
+        max-width: 800px;
+    }
+
+    .contact-form {
+        gap: 24px;
+    }
+
+    .form-group input, .form-group textarea {
+        padding: 16px 18px;
+    }
+
+    .form-group textarea {
+        min-height: 200px;
+    }
+
+    /* FOOTER */
+    .footer {
+        padding: 35px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .footer-links {
+        gap: 32px;
+    }
 }
