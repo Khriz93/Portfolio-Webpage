@@ -35,6 +35,28 @@ ul {
     list-style: none;
 }
 
+.hero, .projects, .about, .skills, .contact {
+        position: relative;
+}
+
+.hero::after, .projects::after, .about::after, .skills::after, .contact::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    pointer-events: none;
+}
+
+.hero::after, .about::after, .contact::after {
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0), #111827);
+}
+
+.projects::after, .skills::after {
+        background: linear-gradient(to bottom, rgba(15, 23, 42, 0), #0f172a);
+}
+
 .section-container {
     width: 90%;
     max-width: 1200px;
@@ -125,6 +147,7 @@ ul {
     display: flex;
     align-items: center;
     padding: 60px 0;
+    overflow: hidden;
 }
 
 .hero-content {
@@ -163,8 +186,9 @@ ul {
 .hero-btns {
     display: flex;
     flex-direction: row;
-    padding-top: 100px;
-    gap: 35px;
+    margin-top: 32px;
+    padding-top: 0;
+    gap: 18px;
 }
 
 .button {
@@ -200,10 +224,53 @@ ul {
     color: #0f172a;
 }
 
+.scroll-down {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #38bdf8;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 2;
+    animation: scrollBounce 2s ease-in-out infinite;
+}
+
+@keyframes scrollBounce {
+    0%, 100% {
+        transform: translate(-50%, 0);
+    }
+    50% {
+        transform: translate(-50%, 8px);
+    }
+}
+
+.scroll-down span {
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #38bdf8;
+    border-bottom: 2px solid #38bdf8;
+    transform: rotate(45deg);
+    margin-top: -4px;
+}
+
+.scroll-down:hover {
+    background-color: #38bdf8;
+}
+
+.scroll-down:hover span {
+    border-color: #0f172a;
+}
+
 /* PROJECTS */
 
 .projects {
-    padding: 80px 0;
+    padding: 70px 0 100px;
     background-color: #111827;
 }
 
@@ -597,6 +664,10 @@ ul {
         width: auto;
     }
 
+    .hero::after, .projects::after, .about::after, .skills::after, .contact::after {
+        height: 100px;
+    }
+
     /* PROJECTS */
     .project-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -686,17 +757,21 @@ ul {
     /* HERO */
     .hero {
         min-height: calc(100vh - 90px);
-        padding: 80px 0;
+        display: flex;
+        align-items: center;
+        padding: 40px 0;
     }
 
     .hero-content {
-        width: 90%;
+        width: 85%;
         max-width: 1200px;
+        margin: 0 auto;
     }
 
     .hero h1 {
         font-size: 4.5rem;
-        max-width: 800px;
+        max-width: 850px;
+        line-height: 1.1;
     }
 
     .hero h2 {
@@ -704,12 +779,27 @@ ul {
     }
 
     .hero-description {
-        max-width: 650px;
+        max-width: 700px;
+        margin: 28px 0 0;
         font-size: 1.1rem;
+        line-height: 1.75;
     }
 
     .hero-btns {
+        display: flex;
+        flex-direction: row;
         gap: 18px;
+        margin-top: 32px;
+        padding-top: 0;
+    }
+
+    .hero, .button {
+        padding: 16px 26px;
+        font-size: 1rem;
+    }
+
+    .hero::after, .projects::after, .about::after, .skills::after, .contact::after {
+        height: 120px;
     }
 
     /* PROJECTS */
