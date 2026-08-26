@@ -92,7 +92,7 @@ form.addEventListener("submit", async function(event)
 
     // CREATE FORM DATA
     const formData = new FormData(form);
-    const object = object.fromEntries(formData);
+    const object = Object.fromEntries(formData);
     const json =  JSON.stringify(object);
 
     try 
@@ -145,7 +145,7 @@ form.addEventListener("submit", async function(event)
 
 nameInput.addEventListener("input", function()
 {
-    if (nameInput !== "")
+    if (nameInput.value.trim() !== "")
     {
         nameInput.classList.remove("error");
         nameError.classList.remove("active");
@@ -170,4 +170,4 @@ messageInput.addEventListener("input", function()
         messageInput.classList.remove("error");
         messageError.classList.remove("active");
     }
-})
+});
