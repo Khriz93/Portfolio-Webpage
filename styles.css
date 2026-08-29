@@ -39,6 +39,10 @@ ul {
         position: relative;
 }
 
+.projects, .about, .skills, .contact {
+    padding-bottom: 120px;
+}
+
 .hero::after, .projects::after, .about::after, .skills::after, .contact::after {
     content: "";
     position: absolute;
@@ -233,12 +237,14 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: transparent;
     border: 1px solid #38bdf8;
     border-radius: 50%;
     transform: translateX(-50%);
     cursor: pointer;
     z-index: 2;
     animation: scrollBounce 2s ease-in-out infinite;
+    transition: background-color 0.2s ease;
 }
 
 @keyframes scrollBounce {
@@ -257,13 +263,24 @@ ul {
     border-bottom: 2px solid #38bdf8;
     transform: rotate(45deg);
     margin-top: -4px;
+    transition: border-color 0.2s ease;
 }
 
-.scroll-down:hover {
+@media (hover:hover) and (pointer: fine) {
+    .scroll-down:hover {
+        background-color: #38bdf8;
+    }
+
+    .scroll-down:hover span {
+        border-color: #0f172a;
+    }
+}
+
+.scroll-down.active {
     background-color: #38bdf8;
 }
 
-.scroll-down:hover span {
+.scroll-down:active span {
     border-color: #0f172a;
 }
 
@@ -304,6 +321,11 @@ ul {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
+.project-card picture {
+    display: block;
+    width: 100%;
+}
+
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 14px 35px rgba(0, 0, 0, 0.3);
@@ -311,7 +333,8 @@ ul {
 
 .project-image {
     width: 100%;
-    height: 220px;
+    height: 240px;
+    object-position: top;
     object-fit: cover;
 }
 
@@ -657,6 +680,15 @@ ul {
 /* TABLET */
 @media (min-width: 768px) {
     /* HERO */
+
+    .hero {
+        padding: 60px 0 140px;
+    }
+
+    .scroll-down {
+        bottom: 35px;
+    }
+
     .hero-content {
         width: 85%;
     }
@@ -688,7 +720,7 @@ ul {
     }
 
     .project-image {
-        height: 240px;
+        height: 260px;
     }
 
     /* ABOUT */
