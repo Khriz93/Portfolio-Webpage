@@ -70,7 +70,8 @@ ul {
 .header {
     position: relative;
     width: 100%;
-    padding: 20px 0;
+    height: 72px;
+    padding: 0;
     background-color: #0f172a;
     z-index: 1000;
 }
@@ -80,15 +81,22 @@ ul {
 .nav-bar {
     width: 90%;
     max-width: 1200px;
+    height: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.name {
-    font-size: 1.25rem;
-    font-weight: 700;
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: auto;
+    height: 60px;
+    display: block;
 }
 
 .menu-btn {
@@ -681,6 +689,10 @@ ul {
 @media (min-width: 768px) {
     /* HERO */
 
+    .logo img {
+        height: 75px;
+    }
+
     .hero {
         padding: 60px 0 140px;
     }
@@ -821,9 +833,12 @@ ul {
         color:#38bdf8
     }
 
+    .logo img {
+        height: 80px;
+    }
+
     /* HERO */
     .hero {
-        min-height: calc(100vh - 90px);
         display: flex;
         align-items: center;
         padding: 40px 0;
