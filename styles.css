@@ -966,6 +966,10 @@ ul {
         max-width: 800px;
     }
 
+    .section-heading p {
+        margin: 0;
+    }
+
     .contact-form {
         gap: 24px;
     }
