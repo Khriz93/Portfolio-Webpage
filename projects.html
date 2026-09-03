@@ -10,9 +10,9 @@
     <script src="./script.js" defer></script>
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
     <nav class="nav-bar">
-        <a href="./index.html#home" class="logo">
+        <a href="./index.html#header" class="logo">
             <img src=./images/Nav-bar_logo.png class="logo-image" alt="Christopher Gorrey">
         </a>
         </div>
@@ -22,7 +22,7 @@
             <span></span>
         </button>
         <ul class="nav-menu">
-            <li><a href="./index.html#home">Home</a></li>
+            <li><a href="./index.html#header">Home</a></li>
             <li><a href="./index.html#projects">Projects</a></li>
             <li><a href="./index.html#about">About</a></li>
             <li><a href="./index.html#skills">Skills</a></li>
@@ -32,7 +32,7 @@
     </header>
     <main>
         <div class="back-container">
-            <a href="./index.html#home" class="button back-btn"><- Back</a>
+            <a href="./index.html#header" class="button back-btn"><- Back</a>
         </div>
         <section class="projects" id="projects">
             <div class="section-container">
@@ -41,6 +41,65 @@
                 </div>
                 <p class="project-description">A comprehensive layout of web applications, mini-tools, and engineering experiments.</p>
                 <div class="project-grid">
+                    <article class="project-card">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="./images/project-screenshots/Developer_Portfolio.png">
+                            <img src="./images/project-screenshots/Developer_Portfolio_Mobile.jpg" alt="Developer Portfolio Webpage" class="project-image">
+                        </picture>
+                        <div class="project-content">
+                            <h3>Developer Portfolio</h3>
+                            <p>
+                                A responsive developer portfolio showcasing my projects, 
+                                skills and experience, featuring interactive navigation, 
+                                form validation and a functional contact form.</p>
+                            <div class="project-technologies">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Khriz93/Portfolio-Webpage" target="_blank" rel="noopener noreferrer">View Code</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="./images/project-screenshots/ElektrickEelFestival.png">
+                            <img src="./images/project-screenshots/Elektrik_Eel_Music_Festival_Mobile.jpg" alt="Elektrik Eel Music Festival project" class="project-image">
+                        </picture>
+                        <div class="project-content">
+                            <h3>Elektrik Eel Music Festival</h3>
+                            <p>A responsive website featuring a music festival landing page and an artist page.</p>
+                            <div class="project-technologies">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://music-festival-website.vercel.app/index.html" target="_blank">Live Site</a>
+                                <a href="https://github.com/Khriz93/MusicFestivalWebsite" target="_blank">View Code</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="./images/project-screenshots/Intro_With_Dropdown_Menu.png">
+                            <img src="./images/project-screenshots/Intro_With_Dropdown_Menu_Mobile.jpg" alt="Intro With Dropdown Menu project" class="project-image">
+                        </picture>
+                        <div class="project-content">
+                            <h3>Intro Section With Dropdown Menu</h3>
+                            <p>A responsive website featuring a intro section with a interactive navigation menu.</p>
+                            <div class="project-technologies">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                            <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://intro-section-with-dropdown-drab.vercel.app/" target="_blank">Live Site</a>
+                                <a href="https://github.com/Khriz93/Intro-Section-With-Dropdown" target="_blank">View Code</a>
+                            </div>
+                        </div>
+                    </article>
                     <article class="project-card">
                         <picture>
                             <source media="(min-width: 768px)" srcset="./images/project-screenshots/Fylo_Dark_Theme_Landing_Page_Desktop1.png">
@@ -147,7 +206,7 @@
                 <a href="https://github.com/Khriz93" target="_blank">Github</a>
                 <a href="https://www.linkedin.com/in/christopher-gorrey-5972b9186/" target="_blank">LinkedIn</a>
             </div>
-                <a href="#projects" class="back-to-top">Back to top</a>
+                <a href="#header" class="back-to-top">Back to top</a>
         </div>
     </footer>
 </body>
